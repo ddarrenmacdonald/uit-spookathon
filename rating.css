@@ -1,0 +1,88 @@
+
+/*********************************************************************************\
+	RATING CSS LIBRARY
+	the css file handeling all the hover states for the rating input in CSS only
+	@author Jonas Weigert
+\*********************************************************************************/
+
+/*************************************************\
+	GENERAL RATING STYLES
+	creates the general behavior for gold stars
+\*************************************************/
+.rating {
+	color: #DDD;
+	background: none;
+}
+
+	.rating span {
+		color: inherit;
+	}
+		.rating a {
+			color: inherit;
+			text-decoration: none;
+		}
+	
+	.rating-star-1:hover .rating-star-2,
+	.rating-star-1:hover .rating-star-2:hover .rating-star-3,
+	.rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4,
+	.rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover .rating-star-5 {
+		color: #DDD;
+	}
+
+	.rating-star-1:hover,
+	.rating-star-1:hover .rating-star-2:hover,
+	.rating-star-1:hover .rating-star-2:hover .rating-star-3:hover,
+	.rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover,
+	.rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover .rating-star-5:hover {
+		color: gold;
+	}
+
+
+/*************************************************\
+	GREEN RATING STYLES
+	creates the general behavior for green stars
+\*************************************************/
+.rating.rating-green {
+	/* NO SPECIAL STYLES FOR THE WRAPPER */ 
+}
+
+	.rating.rating-green .rating-star-1:hover,
+	.rating.rating-green .rating-star-1:hover .rating-star-2:hover,
+	.rating.rating-green .rating-star-1:hover .rating-star-2:hover .rating-star-3:hover,
+	.rating.rating-green .rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover,
+	.rating.rating-green .rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover .rating-star-5:hover {
+		color: #16a085;
+	}
+
+
+/*************************************************\
+	RED TO GREEN RATING STYLES
+	creates the general behavior for red to green
+\*************************************************/
+.rating.rating-redtogreen {
+	/* NO SPECIAL STYLES FOR THE WRAPPER */ 
+}
+
+	.rating.rating-redtogreen .rating-star-1:hover { color: #c0392b; }
+	.rating.rating-redtogreen .rating-star-1:hover .rating-star-2:hover { color: #f39c12; }
+	.rating.rating-redtogreen .rating-star-1:hover .rating-star-2:hover .rating-star-3:hover { color:#f1c40f; }
+	.rating.rating-redtogreen .rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover {color: #2ecc71; }
+	.rating.rating-redtogreen .rating-star-1:hover .rating-star-2:hover .rating-star-3:hover .rating-star-4:hover .rating-star-5:hover { color: #16a085; }
+
+
+/*************************************************\
+	SHOW STRUCTURE CSS
+\*************************************************/	
+.rating.show-structure span {
+	margin:4px;
+	display: inline-block;
+	padding:4px;
+	border:2px solid #c0392b;
+	border-radius: 4px;
+	background:#EFEFEF;
+}
+	.rating.show-structure span:hover {
+		background: #CCC;
+	}
+	
+

@@ -1,0 +1,16 @@
+	
+
+	div.header {
+		background: #EFEFEF;
+		border-bottom: 1px solid #DDDDDD;
+		padding:100px 0px;
+	}
+
+		div.header .rating {
+			font-size:100px; 
+			text-align:center;
+		}
+
+	div.content {
+		padding:60px 0px;
+	}
