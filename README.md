@@ -1,4 +1,4 @@
 uit-spookathon
 ==============
 
-This is home of our Halloween Spookathon App for Darren MacDonald, Heather Voyles and Sean Demeyere..
+This is home of our Halloween Spookathon App for team "Coding Corpses" aka Darren MacDonald, Heather Voyles and Sean Demeyere.
