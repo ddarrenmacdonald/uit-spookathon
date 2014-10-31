@@ -1,56 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Spookathon</title>
-	
-	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="./assets/css/page.css" />
-	<link rel="stylesheet" type="text/css" href="./rating.css" />
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="./assets/js/revealstructure.js"></script>
-  <script type="text/javascript" src="./assets/js/gmaps.js"></script>
-  <script type="text/javascript">
 
-<!-- This is the Google Map Code -->
-  
-    $(document).ready(function(){ 
-      var map = new GMaps({
-        div: '#map',
-        lat: 46.1426713,
-        lng: -60.1964615,
-        zoom: 11   
-      });
+<html data-wf-site="545260a8b0a2eeb00b0efcc3" data-wf-page="545260a8b0a2eeb00b0efcc5">
+<head>
+  <meta charset="utf-8">
+  <title>Hauntometer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/hauntometer.webflow.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/page.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/rating.css" />
+  <script src="assets/js/revealstructure.js"></script>
+  <script src="assets/js/modernizr.js"></script>
+  <script src="assets/js/webflow.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/gmaps/gmaps.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Roboto:300,regular","Roboto Condensed:regular"]
+      }
     });
   </script>
+  <script>
+  function initialize (location) {
+    console.log(location);
+  }
+  $(document).ready(function()
+    {
+      navigator.geolocation.getCurrentPosition(initialize);
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
 </head>
 <body>
-	<div id="map">
-    
+  <div class="navbar">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6 left-nav">
+          <a class="w-inline-block" href="index.html"><img class="logo" src="assets/images/pumpkin.png" width="50" alt="545262076d56a6c126a6a2ce_pumpkin.png">
+            <div class="brand">Hauntometer</div>
+          </a>
+        </div>
+        <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6 right-nav"></div>
+      </div>
+    </div>
   </div>
-	<div class="header">
-		
-		<!-- RATING SCALE INPUT -->
-		<div class="rating">
-			<span class="rating-star-1">
-				<a href="#rate-1">&#9733;</a>
-				<span class="rating-star-2">
-					<a href="#rate-2">&#9733;</a>
-					<span class="rating-star-3">
-						<a href="#rate-3">&#9733;</a>
-						<span class="rating-star-4">
-							<a href="#rate-4">&#9733;</a>
-							<span class="rating-star-5">
-								<a href="#rate-5">&#9733;</a>
-							</span>
-						</span>
-					</span>
-				</span>
-			</span>
-		</div>
-
-
-
+  <!-- This is the Google Map Code -->
+  <div class="section hero">
+    <div class="w-container container">
+      <h1>Google Maps</h1>
+      <div id="map"></div>
+    </div>
+  </div>
+  
+  <!-- This is the Rating Scale Code -->
+  <div class="section grey" data-anchor="slide1">
+    <div class="w-container">
+      <h2 class="grey-heading">Rating Scale</h2>
+      <div class="rating">
+      <span class="rating-star-1">
+        <a href="#rate-1">&#9733;</a>
+        <span class="rating-star-2">
+          <a href="#rate-2">&#9733;</a>
+          <span class="rating-star-3">
+            <a href="#rate-3">&#9733;</a>
+            <span class="rating-star-4">
+              <a href="#rate-4">&#9733;</a>
+              <span class="rating-star-5">
+                <a href="#rate-5">&#9733;</a>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    </div>
+  </div>
+  
+  <!-- This is the Comments Code -->
+  <div class="section">
+    <div class="w-container">
+      <h2 class="grey-heading">Comments</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.&nbsp;</p>
+    </div>
+  </div>
+  
+  <!-- This is the Freaky Factor Score -->
+  <div class="social-section">
+    <div class="w-container">
+      <h2>Freaky Factor</h2>
+      <p>Want more unlimited storage? Refer more friends.</p>
+      <div class="share-wrapper">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section grey">
+    <div class="w-container"><img class="logo footer" src="assets/images/pumpkin.png" width="50" alt="545262076d56a6c126a6a2ce_pumpkin.png">
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
-
-		<!-- END OF SCALE INPUT -->
+</html>
