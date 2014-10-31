@@ -27,15 +27,21 @@
       }
     });
   </script>
-  <script>
-  function initialize (location) {
-    console.log(location);
-  }
-  $(document).ready(function()
-    {
-      navigator.geolocation.getCurrentPosition(initialize);
-    });
-  </script>
+  <script type="text/javascript">
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(46.1429341,-60.1968193);
+        var mapOptions = {
+          zoom: 16,
+          center: myLatlng
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'),
+            mapOptions);
+
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
   <script type="text/javascript" src="js/modernizr.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
@@ -57,8 +63,8 @@
   <!-- This is the Google Map Code -->
   <div class="section hero">
     <div class="w-container container">
-      <div id="map">
-    </div>
+      <center><div id="map">
+    </div></center>
       </div>
 
     </div>
