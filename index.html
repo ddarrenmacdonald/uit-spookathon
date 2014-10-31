@@ -2,19 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CSS Only Rating Scale Input | Jonas Weigert</title>
+	<title>Spookathon</title>
 	
 	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="./assets/css/page.css" />
 	<link rel="stylesheet" type="text/css" href="./rating.css" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./assets/js/revealstructure.js"></script>
+  <script type="text/javascript" src="./assets/js/gmaps.js"></script>
+  <script type="text/javascript">
 
-
-	
+<!-- This is the Google Map Code -->
+  <script>
+    $(document).ready(function(){ 
+      var map = new GMaps({
+        div: '#map',
+        lat: 46.1426713,
+        lng: -60.1964615,
+        zoom: 11   
+      });
+    });
+  </script>
 </head>
 <body>
-	
+	<div id="map">
+    
+  </div>
 	<div class="header">
 		
 		<!-- RATING SCALE INPUT -->
@@ -37,40 +50,7 @@
 		</div>
 
 
-<!-- This is the Google Map Code -->
-<script type="text/javascript">
-    var map;
-    $(document).ready(function(){
-      prettyPrint();
-      map = new GMaps({
-        div: '#map',
-        lat: 46.1426713,
-        lng: -60.1964615
-      });
-      map.addMarker({
-        lat: -12.043333,
-        lng: -77.03,
-        title: 'Lima',
-        details: {
-          database_id: 42,
-          author: 'HPNeo'
-        },
-        click: function(e){
-          if(console.log)
-            console.log(e);
-          alert('You clicked in this marker');
-        }
-      });
-      map.addMarker({
-        lat: -12.042,
-        lng: -77.028333,
-        title: 'Marker with InfoWindow',
-        infoWindow: {
-          content: '<p>HTML Content</p>'
-        }
-      });
-    });
-  </script>
+
 </body>
 
 		<!-- END OF SCALE INPUT -->
